@@ -1,0 +1,47 @@
+---
+title: "Report Title"
+author: '[Author](mailto:yourname@snapfinance.com)'
+date: "`r format(Sys.time(),'%B %d, %Y @ %I:%M%p')`"
+output:
+  rmdformats::readthedown_uk:
+    highlight: tango
+    code_folding: hide
+    toc_depth: 3
+    use_bookdown: TRUE
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(rmdformats)
+
+library(dplyr)
+library(tidyr)
+library(pins)
+library(reactable)
+library(lubridate)
+library(magrittr)
+library(snapdragon)
+library(purrr)
+library(janitor)
+
+library(highcharter)
+opts <- getOption("highcharter.lang")
+opts$thousandsSep <- ","
+options(highcharter.lang = opts)
+
+## Global options
+opts_chunk$set(
+  # eval = FALSE, # uncomment this when first publishing to add credentials
+  echo = TRUE,
+  cache = FALSE,
+  prompt = FALSE,
+  tidy = FALSE,
+  comment = NA,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+```{r}
+
+```
